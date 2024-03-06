@@ -1,1 +1,107 @@
-/* Denna fil skall innehålla din CSS kod */
+#wrapper1{
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "hd hd"
+    "ma as"
+    "ft ft";
+}
+
+header{
+    grid-area: hd;
+    background-color: lightblue;
+}
+
+header h1{
+    margin: 0.4rem;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+main{
+    grid-area: ma;
+    background-color:slateblue;
+}
+
+aside{
+    grid-area: as;
+    background-color: lightsteelblue;
+}
+
+footer{
+    grid-area: ft;
+    background-color: lightskyblue;
+}
+
+@media screen and (max-width:600px) {
+    body{
+        background-color: lightsteelblue;
+    }
+
+    header{
+        position: relative;
+    }
+
+    #hamburger{
+        /* border: 1px solid black; */
+        height: 1.5rem;
+        width: 2.2rem;
+        position:absolute;
+        top: 0.7rem;
+        right: 0.7rem;
+    }
+
+    #hamburger div{
+        border: 1.3px solid black;
+        margin: 0.3rem;
+    }
+
+    nav{
+        justify-content: center;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    nav.active{
+        max-height: 1000px;
+        transition: max-height 2s;
+    }
+
+    nav ul{
+        display: block;
+        padding: 0;
+    }
+
+    nav ul li{
+        text-align: center;
+    }
+
+    nav ul li a{
+        width: 100%;
+        height: 100%;
+    }
+
+    nav ul li:hover{
+        background-color: slateblue;
+    }
+}
