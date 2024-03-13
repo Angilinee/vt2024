@@ -14,13 +14,20 @@ body{
 }
 
 .image-grid{
-    --gap: 16px;
+    --gap: 20px;
     --num-cols: 4s;
     --row-height: 300px;
 
     box-sizing: border-box;
     padding: var(--gap);
+    align-items: center;  
+}
 
+.image-grid img{
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  display: block;
 }
 
 header{
@@ -31,6 +38,7 @@ header{
 header h1{
     margin: 0.4rem;
     color: white;
+    font-size: 60px;
 }
 
 nav{
@@ -40,6 +48,7 @@ nav{
 
 nav ul{
     display: flex;
+    font-size: 25px;
 }
 
 nav ul li{
@@ -56,17 +65,30 @@ main{
     grid-area: ma;
     background-color: aliceblue;
     padding: 20px;
+}
 
+main img{
+    border-radius: 50%;
+    width: 600px;
 }
 
 aside{
     grid-area: as;
     background-color: aliceblue;
+    align-items: center;
+    display: flex;
 }
 
 footer{
     grid-area: ft;
     background-color: lightblue;
+}
+
+ul{
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+    text-align: center;
 }
 
 @media screen and (max-width:600px) {
@@ -88,7 +110,7 @@ footer{
     }
 
     #hamburger div{
-        border: 1.3px solid black;
+        border: 1.5px solid black;
         margin: 0.3rem;
     }
 
