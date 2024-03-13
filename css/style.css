@@ -9,6 +9,20 @@
     "ft ft";
 }
 
+body{
+    margin: 0;
+}
+
+.image-grid{
+    --gap: 16px;
+    --num-cols: 4s;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+}
+
 header{
     grid-area: hd;
     background-color: lightblue;
@@ -40,17 +54,19 @@ nav ul li a{
 
 main{
     grid-area: ma;
-    background-color:slateblue;
+    background-color: aliceblue;
+    padding: 20px;
+
 }
 
 aside{
     grid-area: as;
-    background-color: lightsteelblue;
+    background-color: aliceblue;
 }
 
 footer{
     grid-area: ft;
-    background-color: lightskyblue;
+    background-color: lightblue;
 }
 
 @media screen and (max-width:600px) {
@@ -84,7 +100,7 @@ footer{
 
     nav.active{
         max-height: 1000px;
-        transition: max-height 2s;
+        transition: max-height 4s;
     }
 
     nav ul{
@@ -102,6 +118,49 @@ footer{
     }
 
     nav ul li:hover{
-        background-color: slateblue;
+        background-color: plum;
     }
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.tittle{
+    margin-bottom: 2rem;
+}
+
+.photo-gallery{
+    display: flex;
+    gap: 20px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media (max-width:768px){
+    .photo-gallery{
+        flex-direction: column;
+    }
+
 }
