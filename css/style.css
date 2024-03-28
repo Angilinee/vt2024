@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #wrapper1{
     border: 1px solid black;
     width: 80%;
@@ -7,7 +11,8 @@
     "hd hd"
     "ma as"
     "ft ft";
-    /* grid-template-columns: 1fr 3fr; */
+    grid-template-columns: 70% 30%;
+    background-color: aliceblue;
 }
 
 body{
@@ -15,19 +20,19 @@ body{
 }
 
 .image-grid{
-    --gap: 20px;
-    --num-cols: 4s;
-    --row-height: 300px;
-
+    /* --gap: 20px; */
+    /* --num-cols: 4s; */
+    /* --row-height: 300px; */
+width: 100%;
     box-sizing: border-box;
-    padding: var(--gap);
-    align-items: center;  
+    /* padding: var(--gap); */
+    /* align-items: center;   */
 }
 
 .image-grid img{
   margin: 10px;
-  width: 200px;
-  height: 200px;
+  width: 170%;
+  /* height: 100%; */
   display: block;
 }
 
@@ -64,13 +69,19 @@ nav ul li a{
 
 main{
     grid-area: ma;
-    background-color: aliceblue;
-    padding: 20px;
+    /* background-color: aliceblue; */
+    /* padding: px; */
+    margin:20px;
 }
 
 main img{
+   
+    width: 100%;
+}
+
+.imageround{
     border-radius: 50%;
-    width: 600px;
+    width: 100%;
 }
 
 aside{
@@ -83,6 +94,7 @@ aside{
 footer{
     grid-area: ft;
     background-color: lightblue;
+    width: 100%;
 }
 
 ul{
@@ -92,7 +104,7 @@ ul{
     text-align: center;
 }
 
-@media screen and (max-width:600px) {
+ @media screen and (max-width:600px) {
     body{
         background-color: lightsteelblue;
     }
@@ -143,7 +155,8 @@ ul{
     nav ul li:hover{
         background-color: plum;
     }
-}
+} 
+
 
 
 
@@ -270,6 +283,8 @@ body{
 
 
 
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -294,8 +309,8 @@ img{
 }
 
 .content{
-    width: 100%;
-    height: 100%;
+    width: 185%;
+    height: 185%;
     top: 0;
     left: 0;
     position: absolute;
@@ -314,11 +329,12 @@ img{
 
 .content h1{
     color: black;
-    margin-bottom: 15px;
+    /* margin-bottom: 10px; */
+    font-size: 20px;
 }
 
 .content h3{
-    font-size: 19px;
+    font-size: 12px;
     color: plum;
 }
 
