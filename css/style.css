@@ -99,6 +99,9 @@ main img{
 aside{
     grid-area: as;
     background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
